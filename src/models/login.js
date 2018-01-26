@@ -27,7 +27,11 @@ export default {
       try {
         // get location pathname
         const urlParams = new URL(window.location.href);
+        // console.log('url:'.concat(urlParams));
+        // http://localhost:8000/#/dashboard/analysis
         const pathname = yield select(state => state.routing.location.pathname);
+        // console.log('pathname:'.concat(pathname));
+        // /dashboard/analysis
         // add the parameters in the url
         urlParams.searchParams.set('redirect', pathname);
         window.history.replaceState(null, 'login', urlParams.href);

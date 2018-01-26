@@ -1,9 +1,55 @@
 import { isUrl } from '../utils/utils';
 
 const menuData = [{
+  name: '个人中心',
+  icon: 'user',
+  path: 'user-center',
+  children: [{
+    name: '首页',
+    path: 'main-page',
+  }, {
+    name: '个人信息',
+    path: 'user-info',
+  }, {
+    // name: '工作台',
+    // path: 'workplace',
+    // hideInMenu: true,
+  }],
+}, {  
+  name: '我要借款',
+  icon: 'bank',
+  path: 'borrow',
+  children: [{
+    name: '新的借款',
+    path: 'borrow-new',
+  }, {
+    name: '所有借款',
+    path: 'borrow-list',
+  }, {
+    name: '借款合同',
+    path: 'borrow-contract',
+    hideInMenu: true,
+  }],
+}, {  
+  name: '我要投资',
+  icon: 'red-envelope',
+  path: 'invest',
+  children: [{
+    name: '所有项目',
+    path: 'invest-all',
+  }, {
+    name: '我的投资',
+    path: 'invest-my',
+  }, {
+    name: '新的投资',
+    path: 'invest-new',
+    hideInMenu: true,
+  }],
+}, {
   name: 'dashboard',
   icon: 'dashboard',
   path: 'dashboard',
+  hideInMenu: true,
   children: [{
     name: '分析页',
     path: 'analysis',
@@ -19,6 +65,7 @@ const menuData = [{
   name: '表单页',
   icon: 'form',
   path: 'form',
+  hideInMenu: true,
   children: [{
     name: '基础表单',
     path: 'basic-form',
@@ -34,6 +81,7 @@ const menuData = [{
   name: '列表页',
   icon: 'table',
   path: 'list',
+  hideInMenu: true,
   children: [{
     name: '查询表格',
     path: 'table-list',
@@ -61,6 +109,7 @@ const menuData = [{
   name: '详情页',
   icon: 'profile',
   path: 'profile',
+  hideInMenu: true,
   children: [{
     name: '基础详情页',
     path: 'basic',
@@ -73,6 +122,7 @@ const menuData = [{
   name: '结果页',
   icon: 'check-circle-o',
   path: 'result',
+  hideInMenu: true,
   children: [{
     name: '成功',
     path: 'success',
@@ -84,6 +134,7 @@ const menuData = [{
   name: '异常页',
   icon: 'warning',
   path: 'exception',
+  hideInMenu: true,
   children: [{
     name: '403',
     path: '403',
@@ -96,7 +147,7 @@ const menuData = [{
   }, {
     name: '触发异常',
     path: 'trigger',
-    hideInMenu: true,
+    // hideInMenu: true,
   }],
 }, {
   name: '账户',
@@ -116,6 +167,7 @@ const menuData = [{
 }, {
   name: '使用文档',
   icon: 'book',
+  hideInMenu: true,
   path: 'http://pro.ant.design/docs/getting-started',
   target: '_blank',
 }];

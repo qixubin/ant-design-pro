@@ -167,14 +167,14 @@ export default class Register extends Component {
               rules: [
                 {
                   required: true,
-                  message: '请输入邮箱地址！',
+                  message: '请输入用户名！',
                 },
-                {
-                  type: 'email',
-                  message: '邮箱地址格式错误！',
-                },
+                // {
+                //   type: 'email',
+                //   message: '邮箱地址格式错误！',
+                // },
               ],
-            })(<Input size="large" placeholder="邮箱" />)}
+            })(<Input size="large" placeholder="用户名" />)}
           </FormItem>
           <FormItem help={this.state.help}>
             <Popover
@@ -219,7 +219,7 @@ export default class Register extends Component {
               ],
             })(<Input size="large" type="password" placeholder="确认密码" />)}
           </FormItem>
-          <FormItem>
+          {/* <FormItem>
             <InputGroup compact>
               <Select
                 size="large"
@@ -273,7 +273,7 @@ export default class Register extends Component {
                 </Button>
               </Col>
             </Row>
-          </FormItem>
+          </FormItem> */}
           <FormItem>
             <Button
               size="large"

@@ -73,6 +73,30 @@ export const getRouterData = (app) => {
     '/': {
       component: dynamicWrapper(app, ['user', 'login'], () => import('../layouts/BasicLayout')),
     },
+    '/user-center/main-page': {
+      component: dynamicWrapper(app, [], () => import('../routes/UserCenter/MainPage')),
+    },
+    '/user-center/user-info': {
+      component: dynamicWrapper(app, ['form'], () => import('../routes/UserCenter/UserInfo')),
+    },
+    '/borrow/borrow-list': {
+      component: dynamicWrapper(app, ['list'], () => import('../routes/Borrow/BorrowList')),
+    },
+    '/borrow/borrow-new': {
+      component: dynamicWrapper(app, [], () => import('../routes/Borrow/BorrowNew')),
+    },
+    '/borrow/borrow-contract': {
+      component: dynamicWrapper(app, [], () => import('../routes/Borrow/BorrowContract')),
+    },
+    '/invest/invest-all': {
+      component: dynamicWrapper(app, [], () => import('../routes/Invest/AllInvestList')),
+    },
+    '/invest/invest-my': {
+      component: dynamicWrapper(app, [], () => import('../routes/Invest/MyInvestList')),
+    },
+    '/invest/invest-new': {
+      component: dynamicWrapper(app, [], () => import('../routes/Invest/InvestNew')),
+    },
     '/dashboard/analysis': {
       component: dynamicWrapper(app, ['chart'], () => import('../routes/Dashboard/Analysis')),
     },
@@ -165,8 +189,10 @@ export const getRouterData = (app) => {
     // },
   };
   // Get name from ./menu.js or just set it in the router data.
-  const menuData = getFlatMenuData(getMenuData());
 
+  // console.log(getMenuData());
+  const menuData = getFlatMenuData(getMenuData());
+  // console.log(menuData);
   // Route configuration data
   // eg. {name,authority ...routerConfig }
   const routerData = {};
@@ -192,5 +218,8 @@ export const getRouterData = (app) => {
     };
     routerData[path] = router;
   });
+
+  // console.log(routerData);
+
   return routerData;
 };
